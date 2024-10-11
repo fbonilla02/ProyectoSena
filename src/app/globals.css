@@ -1,27 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --colorBlack: #161616;
+  --colorWhite: #f2f2f2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-dmSans);
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1 {
+  font-size: 112px;
+  line-height: 90px;
+  color: var(--colorBlack);
+}
+
+h2 {
+  font-size: 94px;
+  line-height: 80px;
+}
+
+h3 {
+  font-size: 90px;
+  line-height: 80px;
+}
+h4 {
+  font-size: 47px;
+  line-height: 50px;
+}
+
+h5 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h6 {
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: -2px;
+}
+a {
+  font-family: var(--font-dmSans);
+}
+p {
+  font-family: var(--font-roboto);
+  font-size: 20px;
+}
+.logo-text {
+  font-size: 61px;
+  line-height: 54px;
+  font-weight: bold;
+  font-family: var(--font-dmSans);
+  letter-spacing: -3px;
+}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+    line-height: 38px;
+    letter-spacing: -3px;
   }
-}
+  h2 {
+    font-size: 43px;
+    line-height: 38px;
+  }
+  h3 {
+    font-size: 38px;
+    line-height: 35px;
+  }
+  h4 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+  h5 {
+    font-size: 26px;
+    line-height: 20px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 21px;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .logo-text {
+    font-size: 48px;
   }
 }
