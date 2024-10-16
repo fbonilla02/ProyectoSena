@@ -12,7 +12,7 @@ export const TrainingImage = ({ name, image, activity }: Props) => {
   return (
     <Link
       className="flex relative w-full"
-      href={`/entrenamientos/${name.toLowerCase()}`}
+      href={`/ejercicios/${name.toLowerCase()}`}
     >
       <Image
         // className="rounded-3xl h-[450px]   object-cover object-[center_15%]  "

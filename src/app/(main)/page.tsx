@@ -37,10 +37,10 @@ export default function Home() {
         </p>
       </section>
       <section>
-        <div className="px-2 py-5">
-          <h5 className="">ENTRENAMIENTOS</h5>
+        <div className="px-2 py-5 lg:px-8 flex justify-between">
+          <h5 className="">EJERCICIOS</h5>
           <Link
-            href="/entrenamientos"
+            href="/ejercicios"
             className="hidden lg:flex items-center gap-2 text-2xl leading-9 tracking-tight font-bold"
           >
             VER TODOS
