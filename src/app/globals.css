@@ -4,6 +4,8 @@
 :root {
   --colorBlack: #161616;
   --colorWhite: #f2f2f2;
+  --font-dmSans: "DM Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 h1,
 h2,
