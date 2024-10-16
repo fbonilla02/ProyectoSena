@@ -1,5 +1,5 @@
 # ACTIVA
-Es un proyecto sena el una aplicacion tanto web como para dispositivos mobile, actualmente estoy haciendo las maquetaciones de las posibles vistas 
+Es un proyecto SENA el cual es una aplicacion tanto web como para dispositivos mobile, actualmente estoy haciendo las maquetaciones de las posibles vistas por lo cual no tiene archivos de logica.
 
 ### Listas
 inicio de sesion y registro
