@@ -13,7 +13,7 @@ export default function AuthLayout({
       >
         ACTIVA
       </Link>
-      <div>{children}</div>
+      <>{children}</>
     </main>
   );
 }

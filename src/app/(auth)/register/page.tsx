@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div
       className="flex flex-col py-[54px] w-full items-center h-[90vh]
@@ -10,7 +10,7 @@ const LoginPage = () => {
     >
       <div className="w-3/5">
         <div className="text-center py-10 gap-2 flex flex-col">
-          <h5>INICIAR SESION</h5>
+          <h5>REGISTRATE</h5>
           <p className="">Escribe tu correo y contraseña para continuar</p>
         </div>
         <form className="flex flex-col gap-2 w-full">
@@ -27,7 +27,7 @@ const LoginPage = () => {
             placeholder="*************"
             className="input input-bordered w-full "
           />
-          <button className="btn btn-neutral ">Iniciar sesion</button>
+          <button className="btn btn-neutral ">Registrarse</button>
         </form>
         <div className="flex justify-between py-2">
           <label className="flex items-center cursor-pointer">
@@ -72,12 +72,13 @@ const LoginPage = () => {
         </div>
       </div>
       <div className="py-5 flex gap-2">
-        <p>¿No tienes cuenta? </p>{" "}
-        <Link className="font-bold" href="/register">
-          Registrate
+        <p>ya tienes cuenta ?</p>{" "}
+        <Link className="font-bold" href="/login">
+          Inicia sesion
         </Link>
       </div>
     </div>
   );
 };
-export default LoginPage;
+
+export default RegisterPage;
