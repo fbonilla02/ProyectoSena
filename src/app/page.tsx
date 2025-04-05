@@ -18,7 +18,7 @@ export default function Home() {
             width={1000}
             height={800}
           />
-          <h2 className="text-colorWhite absolute text-center">
+          <h2 className="text-primary absolute text-center">
             MEJORA <span className="block">TU VIDA</span>
           </h2>
         </div>

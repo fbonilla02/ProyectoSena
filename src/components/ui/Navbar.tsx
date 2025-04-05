@@ -53,7 +53,7 @@ export const Navbar = () => {
               Empieza Gratis
             </Link>
           </div>
-          <div className="fixed flex bottom-0 right-0 gap-1  rounded-sm">
+          <div className="fixed flex bottom-0 right-0 gap-1  rounded-xs">
             <span>By</span>
             <Image
               src="/fbonilla02.svg"
