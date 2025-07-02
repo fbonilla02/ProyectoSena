@@ -22,7 +22,7 @@ export const Navbar = () => {
         </div>
         {/* toggleMenu */}
         <div
-          className={`fixed top-0 left-0 h-screen z-10 w-screen bg-colorBlack text-colorWhite ${!isMenuOpen && "hidden"}`}
+          className={`fixed top-0 left-0 h-screen z-10 w-screen bg-primary   ${!isMenuOpen && "hidden"}`}
         >
           <div className="flex items-center justify-between px-2">
             <div onClick={toggleMenu} className=" block lg:hidden">
@@ -39,7 +39,7 @@ export const Navbar = () => {
           </div>
           <div className=" grid grid-rows-2 px-2 justify-center items-center h-full text-5xl">
             <div
-              className="flex flex-col items-center justify-end h-full gap-10"
+              className="flex flex-col items-center  justify-end h-full gap-10"
               onClick={toggleMenu}
             >
               <Link href="/entrenamientos">Entrenamientos</Link>

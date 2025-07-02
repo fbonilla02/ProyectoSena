@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: --default;
-}
+@plugin "daisyui";
 @plugin "daisyui/theme" {
+  name: "light";
   default: true;
+  prefersdark: true;
   --color-primary: #f2f2f2;
   --color-secondary: #161616;
 }
@@ -27,8 +27,6 @@
 /* } */
 
 :root {
-  --colorBlack: #161616;
-  --colorWhite: #f2f2f2;
   --font-dmSans: "DM Sans", sans-serif;
   --font-roboto: "Roboto", sans-serif;
 }
@@ -45,7 +43,6 @@ h6 {
 h1 {
   font-size: 112px;
   line-height: 90px;
-  color: var(--colorBlack);
 }
 
 h2 {

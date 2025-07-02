@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <section className="py-10 lg:py-20 px-8 flex flex-col items-center">
-        <h1 className="text-center">
+        <h1 className="text-center text-lime-500">
           TRANSFORMA <span className="block"> TU CUERPO </span>
         </h1>
         <div className="py-8 flex flex-col items-center justify-center relative">
