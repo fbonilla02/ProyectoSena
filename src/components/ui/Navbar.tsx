@@ -2,6 +2,7 @@
 import { dmSans } from "@/config/fonts";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
@@ -12,6 +13,9 @@ export const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
     console.log("hola");
   };
+  const pathname = usePathname();
+
+  console.log(pathname);
   return (
     <nav
       className={`${dmSans.className} px-2 h-16 py-2 lg:text-3xl lg:px-8 lg:py-5 lg:h-28 flex items-center justify-between`}
@@ -27,12 +31,12 @@ export const Navbar = () => {
           <div className="flex items-center justify-between px-2">
             <div onClick={toggleMenu} className=" block lg:hidden">
               <AiOutlineClose
-                color="white"
+                color="black"
                 className="h-12 w-12 cursor-pointer"
               />
             </div>
             <div>
-              <Link href="/" className="lg:text-5xl logo-text text-colorWhite">
+              <Link href="/" className=" lg:text-5xl logo-text text-colorWhite">
                 ACTIVA
               </Link>
             </div>
@@ -64,7 +68,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div>
-          <Link href="/" className="lg:text-5xl logo-text">
+          <Link href="/" className="hidden lg:block lg:text-5xl logo-text">
             ACTIVA
           </Link>
         </div>
