@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { dmSans, roboto } from "@/config/fonts";
-import { Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Activa",
@@ -15,10 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.variable} ${dmSans.variable}`}>
-      <body>
-        <Navbar />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
