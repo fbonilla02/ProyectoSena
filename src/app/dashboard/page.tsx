@@ -1,4 +1,3 @@
-import { Modal } from "@/components/modals/modal";
 import { CalendarApp } from "@/components/ui/calendar/Calendar";
 
 export default function Dashboard() {
