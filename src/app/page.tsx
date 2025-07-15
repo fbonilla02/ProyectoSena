@@ -3,11 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
+import { Navbar } from "@/components";
 export default function Home() {
   return (
     <>
+      <Navbar />
       <section className="py-10 lg:py-20 px-8 flex flex-col items-center">
-        <h1 className="text-center text-lime-500">
+        <h1 className="text-center">
           TRANSFORMA <span className="block"> TU CUERPO </span>
         </h1>
         <div className="py-8 flex flex-col items-center justify-center relative">
@@ -18,7 +20,7 @@ export default function Home() {
             width={1000}
             height={800}
           />
-          <h2 className="text-primary absolute text-center">
+          <h2 className="text-secondary absolute text-center">
             MEJORA <span className="block">TU VIDA</span>
           </h2>
         </div>
