@@ -58,8 +58,8 @@ const RegisterPage = () => {
           </button>
 
           <button
-            className="btn btn-outline items-center w-2/5 flex justify-center gap-2  
-            px-5 py-2 "
+            className="btn btn-outline items-center flex gap-2 w-2/5 justify-center border rounded-md
+            px-5 py-2"
           >
             <Image
               src="/facebook.png"
