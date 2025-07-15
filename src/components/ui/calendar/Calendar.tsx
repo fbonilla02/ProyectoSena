@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Calendar } from "../calendar";
 
 export const CalendarApp = () => {
-  const [date, setDate] = useState<Date | undefined>(Date.now());
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
   return (
     <Calendar
