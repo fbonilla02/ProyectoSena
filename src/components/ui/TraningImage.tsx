@@ -33,7 +33,7 @@ export const TrainingImage = ({ name, image, activity }: Props) => {
         unoptimized
       />
       <div className="absolute bottom-4 px-2  flex items-center justify-between w-full">
-        <h3 className="text-colorWhite">{name}</h3>
+        <h3 className="text-secondary">{name}</h3>
         <FaArrowRightLong
           color="white"
           className=" h-10 w-10 lg:h-32 lg:w-32"
