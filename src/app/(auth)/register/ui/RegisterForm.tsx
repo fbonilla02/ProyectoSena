@@ -1,30 +1,70 @@
+"use client";
+import { registerUser } from "@/actions/auth/register";
+import clsx from "clsx";
 import Image from "next/image";
-import React from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { login } from "../../../../actions/auth/login";
 
 export const RegisterForm = () => {
+  const [errorMessage, setErrorMessage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = handleSubmit(async (data) => {
+    setErrorMessage("");
+    const { username, email, password } = data;
+    const resp = await registerUser(username, email, password);
+
+    if (!resp.ok) {
+      setErrorMessage(resp.message);
+      return;
+    }
+    console.log("salio bien");
+
+    await login(email.toLowerCase(), password);
+    window.location.replace("/dashboard");
+  });
+
   return (
     <div>
-      <form className="flex flex-col gap-2 w-full">
-        <label>Nombre</label>
+      <form onSubmit={onSubmit} className="flex flex-col gap-2 w-full">
+        <label>Apodo</label>
 
         <input
-          type="name"
+          {...register("username", {
+            required: "este campo es requerido",
+          })}
+          type="username"
           placeholder="juan perez"
-          className="input input-bordered w-full font-dmSans"
+          className={clsx("input input-bordered border w-full font-dmSans", {
+            "border-red-500": errors.username,
+          })}
         />
+
         <label>Correo</label>
 
         <input
+          {...register("email", { required: true })}
           type="email"
           placeholder="juanperez@gmail.com"
-          className="input input-bordered w-full font-dmSans"
+          className={clsx("input input-bordered border w-full font-dmSans", {
+            "border-red-500": errors.email,
+          })}
         />
         <label>Contraseña</label>
         <input
+          {...register("password", { required: true })}
           type="password"
           placeholder="*************"
-          className="input input-bordered w-full "
+          className={clsx("input input-bordered border w-full", {
+            "border-red-500": errors.email,
+          })}
         />
+        {errorMessage && <span className="text-red-500">{errorMessage}</span>}
         <button className="btn btn-neutral ">Registrarse</button>
       </form>
       {/* <div className="flex justify-between py-2">

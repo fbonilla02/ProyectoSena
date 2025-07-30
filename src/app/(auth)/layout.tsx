@@ -1,10 +1,17 @@
+import { auth } from "@/auth.config";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function AuthLayout({
+export default async function AuthLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await auth();
+
+  if (session?.user) {
+    redirect("/dashboard");
+  }
   return (
     <main>
       <Link
