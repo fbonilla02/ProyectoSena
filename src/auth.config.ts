@@ -11,7 +11,8 @@ export const authConfig: NextAuthConfig = {
     newUser: "/register",
   },
   callbacks: {
-    authorized({ auth, request: { nextUrl } }) {
+    authorized() {
+      // authorized({ auth, request: { nextUrl } }) {
       // const isLoggedIn = !!auth?.user;
       // const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
       // if (isOnDashboard) {
@@ -30,7 +31,7 @@ export const authConfig: NextAuthConfig = {
 
       return token;
     },
-    session({ session, token, user }) {
+    session({ session, token }) {
       session.user = token.data as any;
 
       return session;

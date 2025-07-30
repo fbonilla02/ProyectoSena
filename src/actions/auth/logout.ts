@@ -6,6 +6,7 @@ export async function logout() {
   try {
     await signOut();
   } catch (error) {
+    console.log(error);
     return "Credentials SignOut";
   }
 }
