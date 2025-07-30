@@ -1,35 +1,35 @@
 # ACTIVA
+
 Es un proyecto SENA el cual es una aplicacion tanto web como para dispositivos mobile, actualmente estoy haciendo las maquetaciones de las posibles vistas por lo cual no tiene archivos de logica.
 
 ### Listas
+
 inicio de sesion y registro
 Landing page principal
 
 ### Pendientes
-Pagina de todos los ejercicios 
-Pagina de cada ejercicio 
 
+Pagina de todos los ejercicios
+Pagina de cada ejercicio
 
 ## Preview
+
 si quiere ver la preview del proyecto puede hacerlo aqui: [ACTIVA](https://proyecto-sena-rho.vercel.app/)
 
-## En su escritorio 
+## En su escritorio
 
-Si quiere instalar el proyecto en su escritorio, haga el git clone e instale las dependencias con ```npm install``` y luego ejecute:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clonar el repositorio.
+2. Crear una copia del `.env.template` y renombrarlo a `.env` y cambiar las variables de entorno.
+3. Instalar dependencias `npm install`
+4. Levantar la base de datos `docker compose up -d`
+5. Correr las migraciones de Primsa `npx prisma migrate dev`
+6. Ejecutar seed `npm run seed`
+7. Correr el proyecto `npm run dev`
 
 Abra [http://localhost:3000](http://localhost:3000) con el navegador para ver el proyecto.
 
 # Estructura de archivos
+
 ```
 └── 📁src
     └── 📁app
@@ -61,8 +61,5 @@ Abra [http://localhost:3000](http://localhost:3000) con el navegador para ver el
         └── fonts.ts
 ```
 
-
 > [!IMPORTANT]
-> Tenga en cuenta que esta no es la version final y esta sujeta a cambios 
-
-
+> Tenga en cuenta que esta no es la version final y esta sujeta a cambios
